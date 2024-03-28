@@ -120,7 +120,9 @@ function App() {
           <div></div>
           <div></div>
           <div></div>
-          <Text mt={22}>Loading news...</Text>
+          <Text mt={24} mr={2}>
+            Loading news...
+          </Text>
         </div>
       ) : (
         <>{renderRows()}</>
