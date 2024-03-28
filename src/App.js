@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (data.length > 0) {
+    if (data?.length > 0) {
       const shuffledArray = shuffleArray(data);
       setShuffledData(shuffledArray);
     }
