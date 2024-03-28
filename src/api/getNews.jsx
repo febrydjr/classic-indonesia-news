@@ -19,10 +19,10 @@ import axios from "axios";
 import cheerio from "cheerio";
 
 const getNewsLink = async () => {
-  const cors = "https://cors-anywhere.herokuapp.com/";
-  const url = "https://berita-indo-api-next.vercel.app/api/cnn-news";
+  const url =
+    "https://server-classic-indonesia-news.vercel.app/api/news/detail";
   try {
-    const response = await axios.get(cors + url);
+    const response = await axios.get(url);
     return response.data.data;
   } catch (error) {
     console.log("Get News Link: ", error);
