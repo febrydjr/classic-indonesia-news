@@ -23,7 +23,7 @@ const getNewsLink = async () => {
     "https://server-classic-indonesia-news.vercel.app/api/news/detail";
   try {
     const response = await axios.get(url);
-    return response.data.data;
+    return response.data;
   } catch (error) {
     console.log("Get News Link: ", error);
   }
