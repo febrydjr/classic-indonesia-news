@@ -12,14 +12,25 @@ Select {
   margin-bottom: 10px;
 }
 
-.lds-spinner {
+/* .lds-spinner {
   color: black;
   display: flex;
   padding-top: 25vh;
   margin: 0;
   justify-content: center;
   height: 100vh;
+} */
+.lds-spinner {
+  color: black;
+  position: fixed; /* Position it relative to the viewport */
+  top: 50%; /* Position it 50% from the top */
+  left: 50%; /* Position it 50% from the left */
+  transform: translate(-50%, -50%); /* Center it precisely */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center its content vertically */
 }
+
 .lds-spinner div {
   transform-origin: 40px 40px;
   animation: lds-spinner 1.2s linear infinite;

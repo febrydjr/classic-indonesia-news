@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Stack, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CardOne from "./components/CardOne";
@@ -103,34 +103,35 @@ function App() {
   };
 
   return (
-    //bgImage={"white-paper-texture-background.jpg"}
-    <Box bgImage={"white-paper-texture-background.jpg"} bgSize={"cover"} px={3}>
-      <Navbar />
+    <Box>
       {data?.length < 1 ? (
-        <div class="lds-spinner">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <Text mt={24} mr={2}>
-            Loading news...
-          </Text>
-        </div>
+        <Box
+          h={"100vh"}
+          bgImage={"white-paper-texture-background.jpg"}
+          // bgSize={"cover"}
+        >
+          <Navbar data={data} />
+          <Image
+            src="loading.gif"
+            w={20}
+            h={20}
+            pos="fixed"
+            top="50%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+          />
+        </Box>
       ) : (
-        <>{renderRows()}</>
+        <Box
+          h={"100%"}
+          bgImage={"white-paper-texture-background.jpg"}
+          // bgSize={"cover"}
+          px={3}
+        >
+          <Navbar data={data} />
+          {renderRows()}
+        </Box>
       )}
-      {/* <>{renderRows()}</> */}
-      {/* <Routes>
-        <Route path="/" element={renderRows()} />
-      </Routes> */}
     </Box>
   );
 }
