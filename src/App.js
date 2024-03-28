@@ -120,7 +120,7 @@ function App() {
           <div></div>
           <div></div>
           <div></div>
-          <Text mt={20}>Please wait...</Text>
+          <Text mt={21}>Loading news...</Text>
         </div>
       ) : (
         <>{renderRows()}</>
