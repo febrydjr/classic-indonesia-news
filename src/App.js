@@ -106,7 +106,7 @@ function App() {
     //bgImage={"white-paper-texture-background.jpg"}
     <Box bgImage={"white-paper-texture-background.jpg"} bgSize={"cover"} px={3}>
       <Navbar />
-      {data?.length == 0 ? (
+      {data?.length < 1 ? (
         <div class="lds-spinner">
           <div></div>
           <div></div>
